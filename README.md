@@ -22,7 +22,7 @@ chmod 755 start.sh
 ## Downloads recomendados
 
 - **Ubuntu Server (LTS):** https://ubuntu.com/download/server  
-- **PuTTY (SSH para Windows):** https://www.putty.org
+- **PuTTY (SSH para Windows):** https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
 
 ## Observação
 
