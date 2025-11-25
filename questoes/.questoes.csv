@@ -1,0 +1,42 @@
+Question,Option 1,Option 2,Option 3,Option 4,Correct Option
+A função do subsistema de E/S é:,Executar diretamente comandos,Interface uniforme,Eliminar drivers,Substituir o processador,Interface uniforme
+Drivers de dispositivos são executados em:,Modo usuário,Modo kernel,Virtualização,Memória secundária,Modo kernel
+Em operações de E/S assíncronas:,Processo espera,Processo continua executando,Dispositivo aguarda ACK,Sistema não sinaliza,Processo continua executando
+O DMA tem como objetivo:,Reduzir cache,Transferir dados sem CPU,Aumentar latência,Substituir driver,Transferir dados sem CPU
+Exemplo de dispositivo de armazenamento estruturado:,Monitor,Teclado,Disco rígido,Impressora,Disco rígido
+Controladoras com write-back cache:,Confirmam após gravação,Confirmam antes da gravação,Eliminam buffers,Usadas apenas em fitas,Confirmam antes da gravação
+Acesso simultâneo é resolvido por:,DMA,Buffering,Proteção de acesso,Barramentos paralelos,Proteção de acesso
+O Thunderbolt encapsula:,USB + Ethernet,PCIe + DisplayPort,SATA + NVMe,Fibre Channel,PCIe + DisplayPort
+Camada dependente do dispositivo trata:,Abstrações genéricas,Características do hardware,Otimização do dispatcher,Gerência de arquivos,Características do hardware
+Exemplos de character devices:,SSD,NVMe,Teclado e terminal,RAID,Teclado e terminal
+Função do escalonador é:,Trocar contexto,Implementar políticas,Carregar processos,Gerenciar E/S,Implementar políticas
+Latência do dispatcher é:,Inicialização,Mudança de contexto,Número de processos,Turnaround,Mudança de contexto
+Em FIFO, o processo selecionado é:,Maior prioridade,Mais curto,O que chegou primeiro,Mais recente,O que chegou primeiro
+Escalonamento com maior risco de starvation:,FIFO,RR,SJF,Cooperativo,SJF
+Round Robin usa como parâmetro:,Memória,Quantum,Threads,DMA,Quantum
+Quantum muito pequeno causa:,Menos context switch,Mais overhead,Execução exclusiva I/O-bound,Inversão de prioridade,Mais overhead
+Aging é utilizado para:,Reduzir fragmentação,Evitar starvation,Criar filas,Melhorar disco,Evitar starvation
+Escalonamento por prioridade:,Prioridade nunca muda,Preempção ocorre,SO não interrompe,Quantum fixo,Preempção ocorre
+Escalonamento cooperativo depende:,SO interromper,Interrupção de hardware,Processo liberar CPU,Múltiplas filas,Processo liberar CPU
+Múltiplas filas com realimentação:,Processo não muda fila,Realimentação ajusta prioridade,Quantum igual,Só para tempo real,Realimentação ajusta prioridade
+Função da MMU:,Proteger processador,Executar instruções,Traduzir endereços,Evitar swap,Traduzir endereços
+Fragmentação interna ocorre quando:,Arquivo fragmenta,Processo não usa tudo,Página faulta,Programa cresce,Processo não usa tudo
+Uma página contém:,Nome do arquivo,Endereço de disco,Parte do espaço virtual,Tabela de diretórios,Parte do espaço virtual
+Page fault ocorre quando:,Página não está na memória,Disco falha,Tabela cheia,Quantum acaba,Página não está na memória
+LRU substitui:,Página modificada,Página mais antiga,Página menos usada recentemente,Primeira carregada,Página menos usada recentemente
+Thrashing ocorre quando:,Muito swapping,Falta inode,Context switch constante,Arquivo cresce,Muito swapping
+Localidade espacial indica:,Acessos próximos,Acessa mesmo frame,Sempre inicia no mesmo endereço,Acesso aleatório,Acessos próximos
+Paginação por demanda carrega:,Antes da execução,Só quando referenciada,Todas de uma vez,Apenas se modificadas,Só quando referenciada
+Segmentação divide memória em:,Páginas fixas,Blocos iguais,Segmentos lógicos,Endereços contíguos,Segmentos lógicos
+Vantagem do TLB:,Mais disco,Menos acessos à memória,Evitar swap,Substituir tabela,Menos acessos à memória
+Arquivo é definido como:,Processo I/O,Conjunto de dados,Partição disco,Bloco contíguo,Conjunto de dados
+Hard link aponta para:,Nome do arquivo,Caminho,O mesmo inode,Sistema diferente,O mesmo inode
+Acesso sequencial:,Acesso direto,Só lê na ordem,Requer índice,Só fitas,Só lê na ordem
+Diretórios armazenam:,Conteúdo,Caminho,Atributos e localização,Só data,Atributos e localização
+Desvantagem alocação contígua:,Sem acesso direto,Fragmentação de blocos,Incompatível com SSD,Depende de FAT,Fragmentação de blocos
+Alocação encadeada permite:,Acesso direto,Sem fragmentação,Blocos em qualquer posição,Arquivos pequenos,Blocos em qualquer posição
+Na alocação indexada:,Cresce sem fragmentar,Índice permite acesso direto,Sem ponteiros,Contígua,Índice permite acesso direto
+Atributos de arquivo incluem:,Tamanho dono datas,CPU usada,Memória virtual,Threads,Tamanho dono datas
+Soft link referencia:,Inode,Caminho,Conteúdo,Bloco direto,Caminho
+Mapa de bits tem como vantagem:,Pouca memória,Acesso aleatório rápido,Mapeamento direto,Alta velocidade,Mapeamento direto
+
