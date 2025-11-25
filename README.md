@@ -19,6 +19,11 @@ chmod 755 start.sh
 - Terminal Bash  
 - Permissão para executar scripts
 
+## Downloads recomendados
+
+- **Ubuntu Server (LTS):** https://ubuntu.com/download/server  
+- **PuTTY (SSH para Windows):** https://www.putty.org
+
 ## Observação
 
 O script `start.sh` guiará você pelas etapas da prática.  
