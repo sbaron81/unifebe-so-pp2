@@ -4,9 +4,9 @@ ORIGINAL="/opt/unifebe-so-pp2/processador/stress_cpu"
 
 # Gera nome aleatório
 NEWNAME=$(tr -dc 'a-z0-9' </dev/urandom | head -c 8)
-NEWNAME="unifebe-$NEWNAME"
+NEWNAME="so-$NEWNAME"
 TMPFILE="/tmp/$NEWNAME"
-rm -f /tmp/unifebe-*
+rm -f /tmp/so-*
 
 # Copia para o novo nome
 cp "$ORIGINAL" "$TMPFILE"
@@ -22,4 +22,4 @@ exec "$TMPFILE" > /dev/null 2>&1 &
 TEST_PID=$!
 
 echo "Feito!"
-echo "Nome do processo: $NEWNAME"
+#echo "Nome do processo: $NEWNAME"
