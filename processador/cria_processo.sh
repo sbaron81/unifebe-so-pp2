@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Criar o executavel
+# gcc -O2 stress_cpu.c -o stress_cpu
+
 ORIGINAL="/opt/unifebe-so-pp2/processador/stress_cpu"
 
 # Gera nome aleatório
@@ -15,8 +18,6 @@ chmod +x "$TMPFILE"
 
 echo 
 echo "Criando o processo..." 
-
-
 
 # Executa o novo e encerra este
 exec "$TMPFILE" > /dev/null 2>&1 & 
