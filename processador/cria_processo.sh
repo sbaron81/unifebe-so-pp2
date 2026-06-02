@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-ORIGINAL="/usr/bin/sleep"
+ORIGINAL="/opt/unifebe-so-pp2/processador/stress_cpu"
 
 # Gera nome aleatório
 NEWNAME=$(tr -dc 'a-z0-9' </dev/urandom | head -c 4)
@@ -18,7 +18,7 @@ echo "Criando o processo..."
 
 
 # Executa o novo e encerra este
-exec "$TMPFILE" "9000" > /dev/null 2>&1 & 
+exec "$TMPFILE" > /dev/null 2>&1 & 
 TEST_PID=$!
 
 echo "Feito!"
