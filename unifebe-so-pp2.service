@@ -1,0 +1,13 @@
+[Unit]
+Description=Servico Web Unifebe SO PP2
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/unifebe-so-pp2/web-version
+ExecStart=/bin/bash /opt/unifebe-so-pp2/web-version/run.sh
+Restart=on-failure
+User=root
+
+[Install]
+WantedBy=multi-user.target
