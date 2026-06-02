@@ -24,18 +24,25 @@ activities:
     check_command: "cat /proc/cpuinfo | grep 'model name' | head -1 | sed 's/.*: //'"
 
   - id: cpu_threads
-    category: "Threads"
-    title: "Quantidade de Threads do Processador"
+    category: "Processador"
+    title: "Quantidade de Threads"
     description: "Informe a quantidade de threads do processador."
     type: "input_match"
     check_command: "lscpu | grep 'Thread(s) per core' | sed 's/.*: //' | head -1" 
   
-  - id: cpu_stress
+  - id: proc_running
+    category: "Processador"
+    title: "Nome do processo"
+    description: "Informe qual é o nome do processo que está utilizando mais CPU no momento."
+    type: "input_match"
+    check_command: "ls /tmp/unifebe* | sed -e 's/\/tmp\///' | head -1" 
+
+  - id: kill
     category: "Processador"
     title: "Carga de CPU"
-    description: "A atividade requer que o sistema esteja sob carga de processamento. Execute o comando 'stress' para ocupar todos os núcleos."
+    description: "Mate o processo que está utilizando mais CPU no momento utilizando o comando 'kill'."
     type: "passive"
-    check_command: "pgrep stress > /dev/null && echo 'true' || echo 'false'"
+    check_command: "ps ax | egrep -v \"grep|ls\" 2>/dev/null | grep \"$(ls /tmp/unifebe-* 2>/dev/null || echo 'nao-encontrado' )\" > /dev/null && echo 'true' || echo 'false'"
     expected_output: "true"
 
   - id: mem_total

@@ -3,7 +3,7 @@
 ORIGINAL="/opt/unifebe-so-pp2/processador/stress_cpu"
 
 # Gera nome aleatório
-NEWNAME=$(tr -dc 'a-z0-9' </dev/urandom | head -c 4)
+NEWNAME=$(tr -dc 'a-z0-9' </dev/urandom | head -c 8)
 NEWNAME="unifebe-$NEWNAME"
 TMPFILE="/tmp/$NEWNAME"
 rm -f /tmp/unifebe-*
