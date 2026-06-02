@@ -28,7 +28,7 @@ activities:
     title: "Quantidade de Threads"
     description: "Informe a quantidade de threads do processador."
     type: "input_match"
-    check_command: "lscpu | grep 'Thread(s) per core' | sed 's/.*: //' | head -1" 
+    check_command: "lscpu | grep 'Thread(s) per core' | sed 's/.*: //' | sed 's/ *//' | cut -d' ' -f1 | head -1" 
   
   - id: proc_running
     category: "Processador"
