@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  os-monitor:
+    build: .
+    container_name: os_monitor_container
+    # Permite que o container veja todos os processos do Host (necessário para psutil e pgrep)
+    pid: "host"
+    # Usa a rede do Host para facilitar o acesso e comunicação direta
+    network_mode: "host"
+    # Privilégios elevados para permitir comandos como 'swapoff' ou leitura de discos do host
+    privileged: true
+    volumes:
+      # Mapeamento do sistema de arquivos especial para ver hardware real
+      - /proc:/proc:ro
+      - /sys:/sys:ro
+      - /etc/os-release:/etc/os-release:ro
+      - /dev:/dev:ro
+      # Persistência do progresso fora do container
+      - ./progress.json:/app/progress.json
+    environment:
+      - PYTHONUNBUFFERED=1
+      # Indica ao psutil o caminho correto do procfs mapeado
+      - PROCFS_PATH=/proc
+    restart: unless-stopped

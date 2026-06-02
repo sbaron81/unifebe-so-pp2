@@ -1,0 +1,281 @@
+questions:
+- correct: Interface uniforme
+  options:
+  - Executar diretamente comandos
+  - Interface uniforme
+  - Eliminar drivers
+  - Substituir o processador
+  question: 'A função do subsistema de E/S é:'
+- correct: Modo kernel
+  options:
+  - Modo usuário
+  - Modo kernel
+  - Virtualização
+  - Memória secundária
+  question: 'Drivers de dispositivos são executados em:'
+- correct: Processo continua executando
+  options:
+  - Processo espera
+  - Processo continua executando
+  - Dispositivo aguarda ACK
+  - Sistema não sinaliza
+  question: 'Em operações de E/S assíncronas:'
+- correct: Transferir dados sem CPU
+  options:
+  - Reduzir cache
+  - Transferir dados sem CPU
+  - Aumentar latência
+  - Substituir driver
+  question: 'O DMA tem como objetivo:'
+- correct: Disco rígido
+  options:
+  - Monitor
+  - Teclado
+  - Disco rígido
+  - Impressora
+  question: 'Exemplo de dispositivo de armazenamento estruturado:'
+- correct: Confirmam antes da gravação
+  options:
+  - Confirmam após gravação
+  - Confirmam antes da gravação
+  - Eliminam buffers
+  - Usadas apenas em fitas
+  question: 'Controladoras com write-back cache:'
+- correct: Proteção de acesso
+  options:
+  - DMA
+  - Buffering
+  - Proteção de acesso
+  - Barramentos paralelos
+  question: 'Acesso simultâneo é resolvido por:'
+- correct: PCIe + DisplayPort
+  options:
+  - USB + Ethernet
+  - PCIe + DisplayPort
+  - SATA + NVMe
+  - Fibre Channel
+  question: 'O Thunderbolt encapsula:'
+- correct: Características do hardware
+  options:
+  - Abstrações genéricas
+  - Características do hardware
+  - Otimização do dispatcher
+  - Gerência de arquivos
+  question: 'Camada dependente do dispositivo trata:'
+- correct: Teclado e terminal
+  options:
+  - SSD
+  - NVMe
+  - Teclado e terminal
+  - RAID
+  question: 'Exemplos de character devices:'
+- correct: Implementar políticas
+  options:
+  - Trocar contexto
+  - Implementar políticas
+  - Carregar processos
+  - Gerenciar E/S
+  question: 'Função do escalonador é:'
+- correct: Mudança de contexto
+  options:
+  - Inicialização
+  - Mudança de contexto
+  - Número de processos
+  - Turnaround
+  question: 'Latência do dispatcher é:'
+- correct: Mais recente
+  options:
+  - ' o processo selecionado é:'
+  - Maior prioridade
+  - Mais curto
+  - O que chegou primeiro
+  question: Em FIFO
+- correct: SJF
+  options:
+  - FIFO
+  - RR
+  - SJF
+  - Cooperativo
+  question: 'Escalonamento com maior risco de starvation:'
+- correct: Quantum
+  options:
+  - Memória
+  - Quantum
+  - Threads
+  - DMA
+  question: 'Round Robin usa como parâmetro:'
+- correct: Mais overhead
+  options:
+  - Menos context switch
+  - Mais overhead
+  - Execução exclusiva I/O-bound
+  - Inversão de prioridade
+  question: 'Quantum muito pequeno causa:'
+- correct: Evitar starvation
+  options:
+  - Reduzir fragmentação
+  - Evitar starvation
+  - Criar filas
+  - Melhorar disco
+  question: 'Aging é utilizado para:'
+- correct: Preempção ocorre
+  options:
+  - Prioridade nunca muda
+  - Preempção ocorre
+  - SO não interrompe
+  - Quantum fixo
+  question: 'Escalonamento por prioridade:'
+- correct: Processo liberar CPU
+  options:
+  - SO interromper
+  - Interrupção de hardware
+  - Processo liberar CPU
+  - Múltiplas filas
+  question: 'Escalonamento cooperativo depende:'
+- correct: Realimentação ajusta prioridade
+  options:
+  - Processo não muda fila
+  - Realimentação ajusta prioridade
+  - Quantum igual
+  - Só para tempo real
+  question: 'Múltiplas filas com realimentação:'
+- correct: Traduzir endereços
+  options:
+  - Proteger processador
+  - Executar instruções
+  - Traduzir endereços
+  - Evitar swap
+  question: 'Função da MMU:'
+- correct: Processo não usa tudo
+  options:
+  - Arquivo fragmenta
+  - Processo não usa tudo
+  - Página faulta
+  - Programa cresce
+  question: 'Fragmentação interna ocorre quando:'
+- correct: Parte do espaço virtual
+  options:
+  - Nome do arquivo
+  - Endereço de disco
+  - Parte do espaço virtual
+  - Tabela de diretórios
+  question: 'Uma página contém:'
+- correct: Página não está na memória
+  options:
+  - Página não está na memória
+  - Disco falha
+  - Tabela cheia
+  - Quantum acaba
+  question: 'Page fault ocorre quando:'
+- correct: Página menos usada recentemente
+  options:
+  - Página modificada
+  - Página mais antiga
+  - Página menos usada recentemente
+  - Primeira carregada
+  question: 'LRU substitui:'
+- correct: Muito swapping
+  options:
+  - Muito swapping
+  - Falta inode
+  - Context switch constante
+  - Arquivo cresce
+  question: 'Thrashing ocorre quando:'
+- correct: Acessos próximos
+  options:
+  - Acessos próximos
+  - Acessa mesmo frame
+  - Sempre inicia no mesmo endereço
+  - Acesso aleatório
+  question: 'Localidade espacial indica:'
+- correct: Só quando referenciada
+  options:
+  - Antes da execução
+  - Só quando referenciada
+  - Todas de uma vez
+  - Apenas se modificadas
+  question: 'Paginação por demanda carrega:'
+- correct: Segmentos lógicos
+  options:
+  - Páginas fixas
+  - Blocos iguais
+  - Segmentos lógicos
+  - Endereços contíguos
+  question: 'Segmentação divide memória em:'
+- correct: Menos acessos à memória
+  options:
+  - Mais disco
+  - Menos acessos à memória
+  - Evitar swap
+  - Substituir tabela
+  question: 'Vantagem do TLB:'
+- correct: Conjunto de dados
+  options:
+  - Processo I/O
+  - Conjunto de dados
+  - Partição disco
+  - Bloco contíguo
+  question: 'Arquivo é definido como:'
+- correct: O mesmo inode
+  options:
+  - Nome do arquivo
+  - Caminho
+  - O mesmo inode
+  - Sistema diferente
+  question: 'Hard link aponta para:'
+- correct: Só lê na ordem
+  options:
+  - Acesso direto
+  - Só lê na ordem
+  - Requer índice
+  - Só fitas
+  question: 'Acesso sequencial:'
+- correct: Atributos e localização
+  options:
+  - Conteúdo
+  - Caminho
+  - Atributos e localização
+  - Só data
+  question: 'Diretórios armazenam:'
+- correct: Fragmentação de blocos
+  options:
+  - Sem acesso direto
+  - Fragmentação de blocos
+  - Incompatível com SSD
+  - Depende de FAT
+  question: 'Desvantagem alocação contígua:'
+- correct: Blocos em qualquer posição
+  options:
+  - Acesso direto
+  - Sem fragmentação
+  - Blocos em qualquer posição
+  - Arquivos pequenos
+  question: 'Alocação encadeada permite:'
+- correct: Índice permite acesso direto
+  options:
+  - Cresce sem fragmentar
+  - Índice permite acesso direto
+  - Sem ponteiros
+  - Contígua
+  question: 'Na alocação indexada:'
+- correct: Tamanho dono datas
+  options:
+  - Tamanho dono datas
+  - CPU usada
+  - Memória virtual
+  - Threads
+  question: 'Atributos de arquivo incluem:'
+- correct: Caminho
+  options:
+  - Inode
+  - Caminho
+  - Conteúdo
+  - Bloco direto
+  question: 'Soft link referencia:'
+- correct: Mapeamento direto
+  options:
+  - Pouca memória
+  - Acesso aleatório rápido
+  - Mapeamento direto
+  - Alta velocidade
+  question: 'Mapa de bits tem como vantagem:'

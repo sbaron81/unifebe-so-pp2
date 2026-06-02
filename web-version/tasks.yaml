@@ -1,0 +1,68 @@
+prerequisites:
+  - id: pkg_stress
+    title: "Pacote 'stress' instalado"
+    check_command: "dpkg -s stress > /dev/null 2>&1 && echo 'true' || echo 'false'"
+  - id: pkg_htop
+    title: "Pacote 'htop' instalado"
+    check_command: "dpkg -s htop > /dev/null 2>&1 && echo 'true' || echo 'false'"
+  - id: pkg_pciutils
+    title: "Pacote 'pciutils' instalado"
+    check_command: "dpkg -s pciutils > /dev/null 2>&1 && echo 'true' || echo 'false'"
+  - id: pkg_git
+    title: "Pacote 'git' instalado"
+    check_command: "dpkg -s git > /dev/null 2>&1 && echo 'true' || echo 'false'"
+  - id: internet_access
+    title: "Acesso à Internet"
+    check_command: "ping -c 1 8.8.8.8 > /dev/null 2>&1 && echo 'true' || echo 'false'"
+
+activities:
+  - id: cpu_model
+    category: "Processador"
+    title: "Modelo do Processador"
+    description: "Qual é modelo exato do processador?"
+    type: "input_match"
+    check_command: "cat /proc/cpuinfo | grep 'model name' | head -1 | sed 's/.*: //'"
+
+  - id: cpu_threads
+    category: "Threads"
+    title: "Quantidade de Threads do Processador"
+    description: "Informe a quantidade de threads do processador."
+    type: "input_match"
+    check_command: "lscpu | grep 'Thread(s) per core' | sed 's/.*: //' | head -1" 
+  
+  - id: cpu_stress
+    category: "Processador"
+    title: "Carga de CPU"
+    description: "A atividade requer que o sistema esteja sob carga de processamento. Execute o comando 'stress' para ocupar todos os núcleos."
+    type: "passive"
+    check_command: "pgrep stress > /dev/null && echo 'true' || echo 'false'"
+    expected_output: "true"
+
+  - id: mem_total
+    category: "Memória"
+    title: "Memória Total"
+    description: "Informe o tamanho total da memória RAM em kB."
+    type: "input_match"
+    check_command: "grep MemTotal /proc/meminfo | sed 's/MemTotal: *//' | cut -d' ' -f1"
+
+  - id: mem_cache
+    category: "Memória Cache L3"
+    title: "Memória Cache L3"
+    description: "Informe o tamanho total da memória Cache L3 em MiB."
+    type: "input_match"
+    check_command: "lscpu | grep 'L3' | sed 's/.*: //' | sed 's/ *//' | cut -d' ' -f1 | head -1"
+
+  - id: swap_status
+    category: "Memória"
+    title: "Estado do Swap"
+    description: "Desative todas as partições de swap do sistema usando 'sudo swapoff -a'."
+    type: "passive"
+    check_command: "[[ $(wc -l < /proc/swaps) -eq 1 ]] && echo 'true' || echo 'false'"
+    expected_output: "true"
+
+  - id: disk_video
+    category: "Dispositivos"
+    title: "Placa de Vídeo"
+    description: "Utilize o comando 'lspci' para identificar o modelo da placa de vídeo (VGA)."
+    type: "input_match"
+    check_command: "lspci | grep VGA | sed 's/.*: //'"
