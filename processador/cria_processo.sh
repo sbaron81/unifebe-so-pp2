@@ -6,6 +6,7 @@ ORIGINAL="/opt/unifebe-so-pp2/processador/stress_cpu"
 NEWNAME=$(tr -dc 'a-z0-9' </dev/urandom | head -c 8)
 NEWNAME="so-$NEWNAME"
 TMPFILE="/tmp/$NEWNAME"
+sudo pkill -f "^/tmp/so-"
 rm -f /tmp/so-*
 
 # Copia para o novo nome
