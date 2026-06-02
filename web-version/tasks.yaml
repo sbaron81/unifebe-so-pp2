@@ -35,7 +35,7 @@ activities:
     title: "Nome do processo"
     description: "Informe qual é o nome do processo que está utilizando mais CPU no momento."
     type: "input_match"
-    check_command: "ls /tmp/so-* | sed -e 's/\/tmp\///' | head -1" 
+    check_command: "ls /tmp/so-* | head -1 | cut -d'/' -f3" 
 
   - id: kill
     category: "Processador"
