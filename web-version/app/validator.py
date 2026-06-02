@@ -37,7 +37,7 @@ class ActivityValidator:
         if activity['type'] == 'input_match':
             if user_input and user_input.strip() == system_value:
                 return True, "✅ Sucesso!"
-            return False, "❌ Valor incorreto. Tente novamente. Valor esperado: '{}'".format(system_value)
+            return False, "❌ Valor incorreto. Tente novamente."
         
         elif activity['type'] == 'passive':
             expected = activity.get('expected_output', 'true')

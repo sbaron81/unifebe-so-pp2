@@ -42,7 +42,7 @@ activities:
     title: "Carga de CPU"
     description: "Mate o processo que está utilizando mais CPU no momento utilizando o comando 'kill'."
     type: "passive"
-    check_command: "ps ax | egrep -v \"grep|ls\" 2>/dev/null | grep \"$(ls /tmp/so-* 2>/dev/null || echo 'nao-encontrado' )\" > /dev/null && echo 'true' || echo 'false'"
+    check_command: "ps ax | egrep -v \"grep|ls\" 2>/dev/null | grep \"$(ls /tmp/so-* 2>/dev/null || echo 'nao-encontrado' )\" > /dev/null && echo 'false' || echo 'true'"
     expected_output: "true"
 
   - id: mem_total
